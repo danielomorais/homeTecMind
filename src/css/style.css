@@ -1,0 +1,213 @@
+:root {
+   --primary-color: #F4A261;
+   --secondary-color: #91dcde;
+   --accent-color: #FF6F61;
+   --dark-color: #1f2937;
+   --light-color: #f8fafc;
+}
+
+body {
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   line-height: 1.6;
+}
+
+.underline-center {
+   position: relative;
+   text-decoration: none;
+   color: #2c3e50;
+   transition: color 0.3s ease;
+}
+
+.underline-center::after {
+   content: '';
+   position: absolute;
+   left: 50%;
+   bottom: -2px;
+   width: 0;
+   height: 3px;
+   background: linear-gradient(90deg, var(--primary-color),  var(--accent-color));
+   transition: all 0.4s ease;
+   transform: translateX(-50%);
+}
+
+.underline-center:hover::after {
+   width: 100%;
+}
+
+.underline-center:hover {
+   color: #e74c3c;
+}
+
+.hero-section {
+   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+   color: white;
+   padding: 100px 0;
+   position: relative;
+   overflow: hidden;
+}
+
+.hero-content {
+   position: relative;
+   z-index: 2;
+}
+
+.feature-card {
+   background: white;
+   border-radius: 15px;
+   padding: 30px;
+   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+   height: 100%;
+}
+
+.feature-card:hover {
+   transform: translateY(-10px);
+   box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.feature-icon {
+   width: 70px;
+   height: 70px;
+   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+   border-radius: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin: 0 auto 20px;
+   color: white;
+}
+
+.testimonial-card {
+   background: white;
+   border-radius: 15px;
+   padding: 30px;
+   box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+   margin: 15px 0;
+}
+
+.pricing-card {
+   background: white;
+   border-radius: 20px;
+   padding: 40px 30px;
+   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+   transition: transform 0.3s ease;
+   position: relative;
+   overflow: hidden;
+}
+
+.pricing-card.featured {
+   border: 3px solid var(--accent-color);
+   transform: scale(1.05);
+}
+
+.pricing-card.featured::before {
+   content: 'MAIS POPULAR';
+   position: absolute;
+   top: 20px;
+   right: -30px;
+   background: var(--accent-color);
+   color: white;
+   padding: 5px 40px;
+   font-size: 12px;
+   font-weight: bold;
+   transform: rotate(45deg);
+}
+
+.pricing-card:hover {
+   transform: translateY(-5px);
+}
+
+.pricing-card.featured:hover {
+   transform: scale(1.05) translateY(-5px);
+}
+
+.btn-outline-primary {
+   background-color: #fff;
+   border: 2px solid var(--accent-color);
+   color: var(--dark-color);
+   border-radius: 25px;
+   padding: 12px 30px;
+   font-weight: 600;
+   transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+   background: #8cc3a983;
+   transform: translateY(-5px);
+}
+
+.section-title {
+   font-size: 2.5rem;
+   font-weight: 700;
+   margin-bottom: 20px;
+   color: var(--dark-color);
+}
+
+.section-subtitle {
+   font-size: 1.2rem;
+   color: #6b7280;
+   margin-bottom: 50px;
+}
+
+#PetTalk-logo {
+   color: var(--primary-color);
+   font-size: 1.8rem;
+   
+}
+
+.navbar-brand {
+   font-weight: 700;
+}
+
+.footer {
+   background: var(--dark-color);
+   color: white;
+   padding: 50px 0 30px;
+}
+
+.underline-left {
+   position: relative;
+   text-decoration: none;
+   color: #2c3e50;
+   transition: color 0.3s ease;
+}
+
+.underline-left::after {
+   content: '';
+   position: absolute;
+   left: 0;
+   bottom: -2px;
+   width: 0;
+   height: 2px;
+   background: var(--light-color);
+   transition: width 0.4s ease;
+}
+
+.underline-left:hover::after {
+   width: 100%;
+}
+
+.rating {
+   color: var(--accent-color);
+}
+
+@media (max-width: 768px) {
+   .hero-section {
+         padding: 60px 0;
+   }
+   
+   .section-title {
+         font-size: 2rem;
+   }
+   
+   .pricing-card.featured {
+         transform: none;
+         margin-top: 20px;
+   }
+}
+
+.cta-section {
+   background: linear-gradient(135deg, var(--dark-color), #374151);
+   color: white;
+   padding: 80px 0;
+}
